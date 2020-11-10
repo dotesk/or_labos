@@ -1,0 +1,392 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "_id": {
+                    "$oid": "5f9786ed928087bf0c8f3f4c"
+                },
+                "naziv": "Scuderia Ferrari",
+                "voditelj": "Mattia Binotto",
+                "vozaci": [
+                    {
+                        "ime": "Charles",
+                        "prezime": "Leclerc",
+                        "broj_bolida": 16.0,
+                        "br_utrka": 54.0,
+                        "br_pobjeda": 2.0,
+                        "osv_WDC": 0.0
+                    },
+                    {
+                        "ime": "Sebastian",
+                        "prezime": "Vettel",
+                        "broj_bolida": 5.0,
+                        "br_utrka": 253.0,
+                        "br_pobjeda": 53.0,
+                        "osv_WDC": 4.0
+                    }
+                ],
+                "bolid": "SF1000",
+                "motor": "Ferrari",
+                "osv_WCC": 16.0,
+                "godina_pocetka": 1950.0,
+                "zemlja": "Italija",
+                "br_utrka": 1005.0,
+                "br_pobjeda": 238.0,
+                "poveznica": "Scuderia_Ferrari"
+            },
+            {
+                "_id": {
+                    "$oid": "5f9786ed928087bf0c8f3f4d"
+                },
+                "naziv": "Mercedes-AMG Petronas",
+                "voditelj": "Toto Wolff",
+                "vozaci": [
+                    {
+                        "ime": "Lewis",
+                        "prezime": "Hamilton",
+                        "broj_bolida": 44.0,
+                        "br_utrka": 222.0,
+                        "br_pobjeda": 92.0,
+                        "osv_WDC": 6.0
+                    },
+                    {
+                        "ime": "Valtteri",
+                        "prezime": "Bottas",
+                        "broj_bolida": 77.0,
+                        "br_utrka": 152.0,
+                        "br_pobjeda": 9.0,
+                        "osv_WDC": 0.0
+                    }
+                ],
+                "bolid": "Mercedes-AMG F1 W11 EQ Performance",
+                "motor": "Mercedes",
+                "osv_WCC": 6.0,
+                "godina_pocetka": 2010.0,
+                "zemlja": "Njemacka",
+                "br_utrka": 222.0,
+                "br_pobjeda": 112.0,
+                "poveznica": "Mercedes-Benz_in_Formula_One"
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "_id": {
+                            "$oid": "5f9786ed928087bf0c8f3f4c"
+                        },
+                        "naziv": "Scuderia Ferrari",
+                        "voditelj": "Mattia Binotto",
+                        "vozaci": [
+                            {
+                                "ime": "Charles",
+                                "prezime": "Leclerc",
+                                "broj_bolida": 16.0,
+                                "br_utrka": 54.0,
+                                "br_pobjeda": 2.0,
+                                "osv_WDC": 0.0
+                            },
+                            {
+                                "ime": "Sebastian",
+                                "prezime": "Vettel",
+                                "broj_bolida": 5.0,
+                                "br_utrka": 253.0,
+                                "br_pobjeda": 53.0,
+                                "osv_WDC": 4.0
+                            }
+                        ],
+                        "bolid": "SF1000",
+                        "motor": "Ferrari",
+                        "osv_WCC": 16.0,
+                        "godina_pocetka": 1950.0,
+                        "zemlja": "Italija",
+                        "br_utrka": 1005.0,
+                        "br_pobjeda": 238.0,
+                        "poveznica": "Scuderia_Ferrari"
+                    }
+                ],
+                "required": [
+                    "_id",
+                    "naziv",
+                    "voditelj",
+                    "vozaci",
+                    "bolid",
+                    "motor",
+                    "osv_WCC",
+                    "godina_pocetka",
+                    "zemlja",
+                    "br_utrka",
+                    "br_pobjeda",
+                    "poveznica"
+                ],
+                "properties": {
+                    "_id": {
+                        "$id": "#/items/anyOf/0/properties/_id",
+                        "type": "object",
+                        "title": "The _id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "$oid": "5f9786ed928087bf0c8f3f4c"
+                            }
+                        ],
+                        "required": [
+                            "$oid"
+                        ],
+                        "properties": {
+                            "$oid": {
+                                "$id": "#/items/anyOf/0/properties/_id/properties/%24oid",
+                                "type": "string",
+                                "title": "The $oid schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "5f9786ed928087bf0c8f3f4c"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    },
+                    "naziv": {
+                        "$id": "#/items/anyOf/0/properties/naziv",
+                        "type": "string",
+                        "title": "The naziv schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Scuderia Ferrari"
+                        ]
+                    },
+                    "voditelj": {
+                        "$id": "#/items/anyOf/0/properties/voditelj",
+                        "type": "string",
+                        "title": "The voditelj schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Mattia Binotto"
+                        ]
+                    },
+                    "vozaci": {
+                        "$id": "#/items/anyOf/0/properties/vozaci",
+                        "type": "array",
+                        "title": "The vozaci schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "examples": [
+                            [
+                                {
+                                    "ime": "Charles",
+                                    "prezime": "Leclerc",
+                                    "broj_bolida": 16.0,
+                                    "br_utrka": 54.0,
+                                    "br_pobjeda": 2.0,
+                                    "osv_WDC": 0.0
+                                },
+                                {
+                                    "ime": "Sebastian",
+                                    "prezime": "Vettel",
+                                    "broj_bolida": 5.0,
+                                    "br_utrka": 253.0,
+                                    "br_pobjeda": 53.0,
+                                    "osv_WDC": 4.0
+                                }
+                            ]
+                        ],
+                        "additionalItems": true,
+                        "items": {
+                            "$id": "#/items/anyOf/0/properties/vozaci/items",
+                            "anyOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/vozaci/items/anyOf/0",
+                                    "type": "object",
+                                    "title": "The first anyOf schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": {},
+                                    "examples": [
+                                        {
+                                            "ime": "Charles",
+                                            "prezime": "Leclerc",
+                                            "broj_bolida": 16.0,
+                                            "br_utrka": 54.0,
+                                            "br_pobjeda": 2.0,
+                                            "osv_WDC": 0.0
+                                        }
+                                    ],
+                                    "required": [
+                                        "ime",
+                                        "prezime",
+                                        "broj_bolida",
+                                        "br_utrka",
+                                        "br_pobjeda",
+                                        "osv_WDC"
+                                    ],
+                                    "properties": {
+                                        "ime": {
+                                            "$id": "#/items/anyOf/0/properties/vozaci/items/anyOf/0/properties/ime",
+                                            "type": "string",
+                                            "title": "The ime schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": "",
+                                            "examples": [
+                                                "Charles"
+                                            ]
+                                        },
+                                        "prezime": {
+                                            "$id": "#/items/anyOf/0/properties/vozaci/items/anyOf/0/properties/prezime",
+                                            "type": "string",
+                                            "title": "The prezime schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": "",
+                                            "examples": [
+                                                "Leclerc"
+                                            ]
+                                        },
+                                        "broj_bolida": {
+                                            "$id": "#/items/anyOf/0/properties/vozaci/items/anyOf/0/properties/broj_bolida",
+                                            "type": "number",
+                                            "title": "The broj_bolida schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0.0,
+                                            "examples": [
+                                                16.0
+                                            ]
+                                        },
+                                        "br_utrka": {
+                                            "$id": "#/items/anyOf/0/properties/vozaci/items/anyOf/0/properties/br_utrka",
+                                            "type": "number",
+                                            "title": "The br_utrka schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0.0,
+                                            "examples": [
+                                                54.0
+                                            ]
+                                        },
+                                        "br_pobjeda": {
+                                            "$id": "#/items/anyOf/0/properties/vozaci/items/anyOf/0/properties/br_pobjeda",
+                                            "type": "number",
+                                            "title": "The br_pobjeda schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0.0,
+                                            "examples": [
+                                                2.0
+                                            ]
+                                        },
+                                        "osv_WDC": {
+                                            "$id": "#/items/anyOf/0/properties/vozaci/items/anyOf/0/properties/osv_WDC",
+                                            "type": "number",
+                                            "title": "The osv_WDC schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0.0,
+                                            "examples": [
+                                                0.0
+                                            ]
+                                        }
+                                    },
+                                    "additionalProperties": true
+                                }
+                            ]
+                        }
+                    },
+                    "bolid": {
+                        "$id": "#/items/anyOf/0/properties/bolid",
+                        "type": "string",
+                        "title": "The bolid schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "SF1000"
+                        ]
+                    },
+                    "motor": {
+                        "$id": "#/items/anyOf/0/properties/motor",
+                        "type": "string",
+                        "title": "The motor schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Ferrari"
+                        ]
+                    },
+                    "osv_WCC": {
+                        "$id": "#/items/anyOf/0/properties/osv_WCC",
+                        "type": "number",
+                        "title": "The osv_WCC schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0.0,
+                        "examples": [
+                            16.0
+                        ]
+                    },
+                    "godina_pocetka": {
+                        "$id": "#/items/anyOf/0/properties/godina_pocetka",
+                        "type": "number",
+                        "title": "The godina_pocetka schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0.0,
+                        "examples": [
+                            1950.0
+                        ]
+                    },
+                    "zemlja": {
+                        "$id": "#/items/anyOf/0/properties/zemlja",
+                        "type": "string",
+                        "title": "The zemlja schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Italija"
+                        ]
+                    },
+                    "br_utrka": {
+                        "$id": "#/items/anyOf/0/properties/br_utrka",
+                        "type": "number",
+                        "title": "The br_utrka schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0.0,
+                        "examples": [
+                            1005.0
+                        ]
+                    },
+                    "br_pobjeda": {
+                        "$id": "#/items/anyOf/0/properties/br_pobjeda",
+                        "type": "number",
+                        "title": "The br_pobjeda schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0.0,
+                        "examples": [
+                            238.0
+                        ]
+                    },
+                    "poveznica": {
+                        "$id": "#/items/anyOf/0/properties/poveznica",
+                        "type": "string",
+                        "title": "The poveznica schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Scuderia_Ferrari"
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}

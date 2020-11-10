@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="naslov">F1 timovi</h1>
+        <input type="text" id="search-input" placeholder="Trazi...">
+        <select id="polja">
+            <option value="polje 1">sva polja (wildcard)</option>
+            <option value="polje 2">_id/$oid</option>
+            <option value="polje 3">naziv</option>
+            <option value="polje 4">voditelj</option>
+            <option value="polje 5">vozac_ime</option>
+            <option value="polje 6">vozac_prezime</option>
+            <option value="polje 7">vozac_broj_bolida</option>
+            <option value="polje 8">vozac_br_utrka</option>
+            <option value="polje 9">vozac_br_pobjeda</option>
+            <option value="polje 10">osv_WDC</option>
+            <option value="polje 11">bolid</option>
+            <option value="polje 12">motor</option>
+            <option value="polje 13">osv_WCC</option>
+            <option value="polje 14">godina_pocetka</option>
+            <option value="polje 15">zemlja</option>
+            <option value="polje 16">tim_br_utrka</option>
+            <option value="polje 17">tim_br_pobjeda</option>
+            <option value="polje 18">poveznica</option>
+        </select>
+        <table id="tab1"> <!-- table table-bordered table-hover table-condensed -->
+            <thead id="head">
+                <tr>
+                    <th title="Field #1">_id/$oid</th>
+                    <th title="Field #2">naziv</th>
+                    <th title="Field #3">voditelj</th>
+                    <th title="Field #4">vozaci/0/ime</th>
+                    <th title="Field #5">vozaci/0/prezime</th>
+                    <th title="Field #6">vozaci/0/broj_bolida</th>
+                    <th title="Field #7">vozaci/0/br_utrka</th>
+                    <th title="Field #8">vozaci/0/br_pobjeda</th>
+                    <th title="Field #9">vozaci/0/osv_WDC</th>
+                    <th title="Field #10">vozaci/1/ime</th>
+                    <th title="Field #11">vozaci/1/prezime</th>
+                    <th title="Field #12">vozaci/1/broj_bolida</th>
+                    <th title="Field #13">vozaci/1/br_utrka</th>
+                    <th title="Field #14">vozaci/1/br_pobjeda</th>
+                    <th title="Field #15">vozaci/1/osv_WDC</th>
+                    <th title="Field #16">bolid</th>
+                    <th title="Field #17">motor</th>
+                    <th title="Field #18">osv_WCC</th>
+                    <th title="Field #19">godina_pocetka</th>
+                    <th title="Field #20">zemlja</th>
+                    <th title="Field #21">br_utrka</th>
+                    <th title="Field #22">br_pobjeda</th>
+                    <th title="Field #23">poveznica</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f4c</td>
+                    <td>Scuderia Ferrari</td>
+                    <td>Mattia Binotto</td>
+                    <td>Charles</td>
+                    <td>Leclerc</td>
+                    <td align="right">16</td>
+                    <td align="right">54</td>
+                    <td align="right">2</td>
+                    <td align="right">0</td>
+                    <td>Sebastian</td>
+                    <td>Vettel</td>
+                    <td align="right">5</td>
+                    <td align="right">253</td>
+                    <td align="right">53</td>
+                    <td align="right">4</td>
+                    <td>SF1000</td>
+                    <td>Ferrari</td>
+                    <td align="right">16</td>
+                    <td align="right">1950</td>
+                    <td>Italija</td>
+                    <td align="right">1005</td>
+                    <td align="right">238</td>
+                    <td>Scuderia_Ferrari</td>
+                </tr>
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f4d</td>
+                    <td>Mercedes-AMG Petronas</td>
+                    <td>Toto Wolff</td>
+                    <td>Lewis</td>
+                    <td>Hamilton</td>
+                    <td align="right">44</td>
+                    <td align="right">222</td>
+                    <td align="right">92</td>
+                    <td align="right">6</td>
+                    <td>Valtteri</td>
+                    <td>Bottas</td>
+                    <td align="right">77</td>
+                    <td align="right">152</td>
+                    <td align="right">9</td>
+                    <td align="right">0</td>
+                    <td>Mercedes-AMG F1 W11 EQ Performance</td>
+                    <td>Mercedes</td>
+                    <td align="right">6</td>
+                    <td align="right">2010</td>
+                    <td>Njemacka</td>
+                    <td align="right">222</td>
+                    <td align="right">112</td>
+                    <td>Mercedes-Benz_in_Formula_One</td>
+                </tr>
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f4e</td>
+                    <td>McLaren</td>
+                    <td>Andreas Seidl</td>
+                    <td>Lando</td>
+                    <td>Norris</td>
+                    <td align="right">4</td>
+                    <td align="right">33</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>Carlos</td>
+                    <td>Sainz</td>
+                    <td align="right">55</td>
+                    <td align="right">114</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>MCL35</td>
+                    <td>Renault</td>
+                    <td align="right">8</td>
+                    <td align="right">1966</td>
+                    <td>Velika Britanija</td>
+                    <td align="right">879</td>
+                    <td align="right">182</td>
+                </tr>
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f4f</td>
+                    <td>Aston Martin Red Bull Racing</td>
+                    <td>Christian Horner</td>
+                    <td>Max</td>
+                    <td>Verstappen</td>
+                    <td align="right">33</td>
+                    <td align="right">114</td>
+                    <td align="right">9</td>
+                    <td align="right">0</td>
+                    <td>Alex</td>
+                    <td>Albon</td>
+                    <td align="right">23</td>
+                    <td align="right">33</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>RB16</td>
+                    <td>Honda</td>
+                    <td align="right">4</td>
+                    <td align="right">2005</td>
+                    <td>Austrija</td>
+                    <td align="right">299</td>
+                    <td align="right">63</td>
+                    <td>Red_Bull_Racing</td>
+                </tr>
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f50</td>
+                    <td>Williams Racing</td>
+                    <td>Simon Roberts</td>
+                    <td>George</td>
+                    <td>Russell</td>
+                    <td align="right">63</td>
+                    <td align="right">33</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>Nicholas</td>
+                    <td>Latifi</td>
+                    <td align="right">6</td>
+                    <td align="right">12</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>FW43</td>
+                    <td>Mercedes</td>
+                    <td align="right">9</td>
+                    <td align="right">1977</td>
+                    <td>Velika Britanija</td>
+                    <td align="right">743</td>
+                    <td align="right">114</td>
+                    <td>Williams_Grand_Prix_Engineering</td>
+                </tr>
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f51</td>
+                    <td>Racing Point</td>
+                    <td>Otmar Szafnauer</td>
+                    <td>Sergio</td>
+                    <td>Perez</td>
+                    <td align="right">11</td>
+                    <td align="right">190</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>Lance</td>
+                    <td>Stroll</td>
+                    <td align="right">18</td>
+                    <td align="right">74</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>RP20</td>
+                    <td>Mercedes</td>
+                    <td align="right">0</td>
+                    <td align="right">2019</td>
+                    <td>Velika Britanija</td>
+                    <td align="right">33</td>
+                    <td align="right">0</td>
+                    <td>Racing_Point_F1_Team</td>
+                </tr>
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f52</td>
+                    <td>Haas</td>
+                    <td>Guenther Steiner</td>
+                    <td>Romain</td>
+                    <td>Grosjean</td>
+                    <td align="right">8</td>
+                    <td align="right">178</td>
+                    <td align="right">9</td>
+                    <td align="right">0</td>
+                    <td>Kevin</td>
+                    <td>Magnussen</td>
+                    <td align="right">20</td>
+                    <td align="right">115</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>VF-20</td>
+                    <td>Ferrari</td>
+                    <td align="right">0</td>
+                    <td align="right">2016</td>
+                    <td>Sjedinjene Americke Drzave</td>
+                    <td align="right">95</td>
+                    <td align="right">0</td>
+                    <td>Haas_F1_Team</td>
+                </tr>
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f53</td>
+                    <td>Alfa Romeo Racing Orlen</td>
+                    <td>Frederic Vasseur</td>
+                    <td>Kimi</td>
+                    <td>Raikkonen</td>
+                    <td align="right">7</td>
+                    <td align="right">327</td>
+                    <td align="right">21</td>
+                    <td align="right">1</td>
+                    <td>Antonio</td>
+                    <td>Giovinazzi</td>
+                    <td align="right">99</td>
+                    <td align="right">35</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>C39</td>
+                    <td>Ferrari</td>
+                    <td align="right">0</td>
+                    <td align="right">1950</td>
+                    <td>Italija</td>
+                    <td align="right">226</td>
+                    <td align="right">12</td>
+                    <td>Alfa_Romeo_in_Formula_One</td>
+                </tr>
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f54</td>
+                    <td>Scuderia AlphaTauri</td>
+                    <td>Franz Tost</td>
+                    <td>Pierre</td>
+                    <td>Gasly</td>
+                    <td align="right">10</td>
+                    <td align="right">59</td>
+                    <td align="right">1</td>
+                    <td align="right">0</td>
+                    <td>Daniil</td>
+                    <td>Kvyat</td>
+                    <td align="right">26</td>
+                    <td align="right">107</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>AT01</td>
+                    <td>Honda</td>
+                    <td align="right">0</td>
+                    <td align="right">2020</td>
+                    <td>Italija</td>
+                    <td align="right">12</td>
+                    <td align="right">1</td>
+                    <td>Scuderia_AlphaTauri</td>
+                </tr>
+                <tr>
+                    <td>5f9786ed928087bf0c8f3f55</td>
+                    <td>Renault</td>
+                    <td>Franz Tost</td>
+                    <td>Daniel</td>
+                    <td>Ricciardo</td>
+                    <td align="right">3</td>
+                    <td align="right">183</td>
+                    <td align="right">7</td>
+                    <td align="right">0</td>
+                    <td>Esteban</td>
+                    <td>Ocon</td>
+                    <td align="right">31</td>
+                    <td align="right">62</td>
+                    <td align="right">0</td>
+                    <td align="right">0</td>
+                    <td>R.S.20</td>
+                    <td>Renault</td>
+                    <td align="right">2</td>
+                    <td align="right">1977</td>
+                    <td>Francuska</td>
+                    <td align="right">398</td>
+                    <td align="right">35</td>
+                    <td>Renault_in_Formula_One</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="exportTableToCSV('F1timovi.csv')">To CSV File</button>
+        <button id="json">To JSON File</button>
+        
+        <script>
+            $(document).ready(function(){
+                $('#search-input').keyup(function(){
+                    search_table($(this).val());
+                });
+
+                function search_table(value){
+                    $('#body tr').each(function(){
+                        var found ='false';
+                        $(this).each(function(){
+                            if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >=0)
+                            {
+                                found='true';
+                            }
+                        });
+                        if(found == 'true')
+                        {
+                            $(this).show();
+                        }
+                        else
+                        {
+                            $(this).hide();
+                        }
+                    });
+                }
+            });
+        </script>
+        <script>
+            function downloadCSV(csv, filename) {
+                var csvFile;
+                var downloadLink;
+
+                // CSV file
+                csvFile = new Blob([csv], {type: "text/csv"});
+
+                // Download link
+                downloadLink = document.createElement("a");
+
+                // File name
+                downloadLink.download = filename;
+
+                // Create a link to the file
+                downloadLink.href = window.URL.createObjectURL(csvFile);
+
+                // Hide download link
+                downloadLink.style.display = "none";
+
+                // Add the link to DOM
+                document.body.appendChild(downloadLink);
+
+                // Click download link
+                downloadLink.click();
+            }
+            function exportTableToCSV(filename) {
+                var csv = [];
+                var rows = document.querySelectorAll("table tr");
+                
+                for (var i = 0; i < rows.length; i++) {
+                    var row = [], cols = rows[i].querySelectorAll("td, th");
+                    
+                    for (var j = 0; j < cols.length; j++) {
+
+                        row.push(cols[j].innerText);
+                        
+                    }
+                    
+                    csv.push(row.join(","));        
+                }
+
+                // Download CSV file
+                downloadCSV(csv.join("\n"), filename);
+            }
+        </script>
+        
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+        <script src="./tableHTMLExport.js"></script>
+        <script>
+            $("#json").on("click"   , function () {
+                $("#tab1").tableHTMLExport({
+                    type: 'json',
+                    filename: 'sample.json'
+                });
+            });
+        </script>
+    </body>
+</html>

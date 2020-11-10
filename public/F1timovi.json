@@ -1,0 +1,331 @@
+[{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f4c"
+	},
+	"naziv": "Scuderia Ferrari",
+	"voditelj": "Mattia Binotto",
+	"vozaci": [
+		{
+			"ime": "Charles",
+			"prezime": "Leclerc",
+			"broj_bolida": 16.0,
+			"br_utrka": 54.0,
+			"br_pobjeda": 2.0,
+			"osv_WDC": 0.0
+		},
+		{
+			"ime": "Sebastian",
+			"prezime": "Vettel",
+			"broj_bolida": 5.0,
+			"br_utrka": 253.0,
+			"br_pobjeda": 53.0,
+			"osv_WDC": 4.0
+		}
+	],
+	"bolid": "SF1000",
+	"motor": "Ferrari",
+	"osv_WCC": 16.0,
+	"godina_pocetka": 1950.0,
+	"zemlja": "Italija",
+	"br_utrka": 1005.0,
+	"br_pobjeda": 238.0,
+	"poveznica": "Scuderia_Ferrari"
+},
+{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f4d"
+	},
+	"naziv": "Mercedes-AMG Petronas",
+	"voditelj": "Toto Wolff",
+	"vozaci": [
+		{
+			"ime": "Lewis",
+			"prezime": "Hamilton",
+			"broj_bolida": 44.0,
+			"br_utrka": 222.0,
+			"br_pobjeda": 92.0,
+			"osv_WDC": 6.0
+		},
+		{
+			"ime": "Valtteri",
+			"prezime": "Bottas",
+			"broj_bolida": 77.0,
+			"br_utrka": 152.0,
+			"br_pobjeda": 9.0,
+			"osv_WDC": 0.0
+		}
+	],
+	"bolid": "Mercedes-AMG F1 W11 EQ Performance",
+	"motor": "Mercedes",
+	"osv_WCC": 6.0,
+	"godina_pocetka": 2010.0,
+	"zemlja": "Njemacka",
+	"br_utrka": 222.0,
+	"br_pobjeda": 112.0,
+	"poveznica": "Mercedes-Benz_in_Formula_One"
+},
+{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f4e"
+	},
+	"naziv": "McLaren",
+	"voditelj": "Andreas Seidl",
+	"vozaci": [
+		{
+			"ime": "Lando",
+			"prezime": "Norris",
+			"broj_bolida": 4.0,
+			"br_utrka": 33.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		},
+		{
+			"ime": "Carlos",
+			"prezime": "Sainz",
+			"broj_bolida": 55.0,
+			"br_utrka": 114.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		}
+	],
+	"bolid": "MCL35",
+	"motor": "Renault",
+	"osv_WCC": 8.0,
+	"godina_pocetka": 1966.0,
+	"zemlja": "Velika Britanija",
+	"br_utrka": 879.0,
+	"br_pobjeda": 182.0,
+	"poveznica": "McLaren"
+},
+{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f4f"
+	},
+	"naziv": "Aston Martin Red Bull Racing",
+	"voditelj": "Christian Horner",
+	"vozaci": [
+		{
+			"ime": "Max",
+			"prezime": "Verstappen",
+			"broj_bolida": 33.0,
+			"br_utrka": 114.0,
+			"br_pobjeda": 9.0,
+			"osv_WDC": 0.0
+		},
+		{
+			"ime": "Alex",
+			"prezime": "Albon",
+			"broj_bolida": 23.0,
+			"br_utrka": 33.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		}
+	],
+	"bolid": "RB16",
+	"motor": "Honda",
+	"osv_WCC": 4.0,
+	"godina_pocetka": 2005.0,
+	"zemlja": "Austrija",
+	"br_utrka": 299.0,
+	"br_pobjeda": 63.0,
+	"poveznica": "Red_Bull_Racing"
+},
+{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f50"
+	},
+	"naziv": "Williams Racing",
+	"voditelj": "Simon Roberts",
+	"vozaci": [
+		{
+			"ime": "George",
+			"prezime": "Russell",
+			"broj_bolida": 63.0,
+			"br_utrka": 33.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		},
+		{
+			"ime": "Nicholas",
+			"prezime": "Latifi",
+			"broj_bolida": 6.0,
+			"br_utrka": 12.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		}
+	],
+	"bolid": "FW43",
+	"motor": "Mercedes",
+	"osv_WCC": 9.0,
+	"godina_pocetka": 1977.0,
+	"zemlja": "Velika Britanija",
+	"br_utrka": 743.0,
+	"br_pobjeda": 114.0,
+	"poveznica": "Williams_Grand_Prix_Engineering"
+},
+{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f51"
+	},
+	"naziv": "Racing Point",
+	"voditelj": "Otmar Szafnauer",
+	"vozaci": [
+		{
+			"ime": "Sergio",
+			"prezime": "Perez",
+			"broj_bolida": 11.0,
+			"br_utrka": 190.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		},
+		{
+			"ime": "Lance",
+			"prezime": "Stroll",
+			"broj_bolida": 18.0,
+			"br_utrka": 74.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		}
+	],
+	"bolid": "RP20",
+	"motor": "Mercedes",
+	"osv_WCC": 0.0,
+	"godina_pocetka": 2019.0,
+	"zemlja": "Velika Britanija",
+	"br_utrka": 33.0,
+	"br_pobjeda": 0.0,
+	"poveznica": "Racing_Point_F1_Team"
+},
+{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f52"
+	},
+	"naziv": "Haas",
+	"voditelj": "Guenther Steiner",
+	"vozaci": [
+		{
+			"ime": "Romain",
+			"prezime": "Grosjean",
+			"broj_bolida": 8.0,
+			"br_utrka": 178.0,
+			"br_pobjeda": 9.0,
+			"osv_WDC": 0.0
+		},
+		{
+			"ime": "Kevin",
+			"prezime": "Magnussen",
+			"broj_bolida": 20.0,
+			"br_utrka": 115.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		}
+	],
+	"bolid": "VF-20",
+	"motor": "Ferrari",
+	"osv_WCC": 0.0,
+	"godina_pocetka": 2016.0,
+	"zemlja": "Sjedinjene Americke Drzave",
+	"br_utrka": 95.0,
+	"br_pobjeda": 0.0,
+	"poveznica": "Haas_F1_Team"
+},
+{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f53"
+	},
+	"naziv": "Alfa Romeo Racing Orlen",
+	"voditelj": "Frederic Vasseur",
+	"vozaci": [
+		{
+			"ime": "Kimi",
+			"prezime": "Raikkonen",
+			"broj_bolida": 7.0,
+			"br_utrka": 327.0,
+			"br_pobjeda": 21.0,
+			"osv_WDC": 1.0
+		},
+		{
+			"ime": "Antonio",
+			"prezime": "Giovinazzi",
+			"broj_bolida": 99.0,
+			"br_utrka": 35.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		}
+	],
+	"bolid": "C39",
+	"motor": "Ferrari",
+	"osv_WCC": 0.0,
+	"godina_pocetka": 1950.0,
+	"zemlja": "Italija",
+	"br_utrka": 226.0,
+	"br_pobjeda": 12.0,
+	"poveznica": "Alfa_Romeo_in_Formula_One"
+},
+{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f54"
+	},
+	"naziv": "Scuderia AlphaTauri",
+	"voditelj": "Franz Tost",
+	"vozaci": [
+		{
+			"ime": "Pierre",
+			"prezime": "Gasly",
+			"broj_bolida": 10.0,
+			"br_utrka": 59.0,
+			"br_pobjeda": 1.0,
+			"osv_WDC": 0.0
+		},
+		{
+			"ime": "Daniil",
+			"prezime": "Kvyat",
+			"broj_bolida": 26.0,
+			"br_utrka": 107.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		}
+	],
+	"bolid": "AT01",
+	"motor": "Honda",
+	"osv_WCC": 0.0,
+	"godina_pocetka": 2020.0,
+	"zemlja": "Italija",
+	"br_utrka": 12.0,
+	"br_pobjeda": 1.0,
+	"poveznica": "Scuderia_AlphaTauri"
+},
+{
+	"_id": {
+		"$oid": "5f9786ed928087bf0c8f3f55"
+	},
+	"naziv": "Renault",
+	"voditelj": "Cyril Abiteboul",
+	"vozaci": [
+		{
+			"ime": "Daniel",
+			"prezime": "Ricciardo",
+			"broj_bolida": 3.0,
+			"br_utrka": 183.0,
+			"br_pobjeda": 7.0,
+			"osv_WDC": 0.0
+		},
+		{
+			"ime": "Esteban",
+			"prezime": "Ocon",
+			"broj_bolida": 31.0,
+			"br_utrka": 62.0,
+			"br_pobjeda": 0.0,
+			"osv_WDC": 0.0
+		}
+	],
+	"bolid": "R.S.20",
+	"motor": "Renault",
+	"osv_WCC": 2.0,
+	"godina_pocetka": 1977.0,
+	"zemlja": "Francuska",
+	"br_utrka": 398.0,
+	"br_pobjeda": 35.0,
+	"poveznica": "Renault_in_Formula_One"
+}]
+

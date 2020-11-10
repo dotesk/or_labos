@@ -1,0 +1,16 @@
+{
+  "name": "or-labos",
+  "version": "0.0.1",
+  "description": "Labos iz predmeta OR",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node db/seed.js"
+  },
+  "author": "Domagoj Teskera",
+  "license": "CC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
