@@ -402,5 +402,33 @@
                 });
             });
         </script>
+        <script>
+            data = fetch('http://localhost:3000/F1timovi.json');
+            data.then(res => {
+                res.json().then(data => {
+                    console.log(data);
+                });
+            });
+        </script>
+        <script>
+            fetch('http://localhost:3000/F1timovi.json', {
+                method: 'POST',
+                body: JSON.stringify({
+                    "naziv": "Tim Hrvatska",
+                    "voditelj": "Vanja Vanjic",
+                    "bolid": "HR44",
+                    "motor": "Ferrari",
+                    "osv_WCC": 4,
+                    "godina_pocetka": 2005,
+                    "zemlja": "Hrvatska",
+                    "br_utrka": 34,
+                    "br_pobjeda": 4,
+                    "poveznica": "Tim_Hrvatska"
+                }),
+                headers: {
+                'Content-Type': "application/json"
+                }
+            });
+        </script>  
     </body>
 </html>
