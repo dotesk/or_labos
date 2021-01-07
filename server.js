@@ -6,8 +6,10 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 
+const bodyParser = require('body-parser');
 
 
+app.use(bodyParser.json());
 
 app.set('views', path.join(__dirname, 'views'));
 
