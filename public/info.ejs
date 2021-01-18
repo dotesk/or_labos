@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <a class="gumb-slika" href="/datatable/<%= tim._id.$oid %>/picture"><b>SLIKA</b> </a>
+<br><br>
+<table id="tab1"> <!-- table table-bordered table-hover table-condensed -->
+    <thead id="head">
+        <tr>
+            <th title="Field #1">_id/$oid</th>
+            <th title="Field #2">naziv</th>   
+            <th title="Field #3">voditelj</th>
+            <th title="Field #4">vozaci/0/ime</th>
+            <th title="Field #5">vozaci/0/prezime</th>
+            <th title="Field #6">vozaci/0/broj_bolida</th>
+            <th title="Field #7">vozaci/0/br_utrka</th>
+            <th title="Field #8">vozaci/0/br_pobjeda</th>
+            <th title="Field #9">vozaci/0/osv_WDC</th>
+            <th title="Field #10">vozaci/1/ime</th>
+            <th title="Field #11">vozaci/1/prezime</th>
+            <th title="Field #12">vozaci/1/broj_bolida</th>
+            <th title="Field #13">vozaci/1/br_utrka</th>
+            <th title="Field #14">vozaci/1/br_pobjeda</th>
+            <th title="Field #15">vozaci/1/osv_WDC</th>
+            <th title="Field #16">bolid</th>
+            <th title="Field #17">motor</th>
+            <th title="Field #18">osv_WCC</th>
+            <th title="Field #19">godina_pocetka</th>
+            <th title="Field #20">zemlja</th>
+            <th title="Field #21">br_utrka</th>
+            <th title="Field #22">br_pobjeda</th>
+            <th title="Field #23">poveznica</th>
+        </tr>
+    </thead>
+    <tbody id="body">
+        <tr>
+            <td> <%= tim._id.$oid %>  </td>
+            <td> <%= tim.naziv %></td>
+            <td> <%= tim.voditelj %> </td>
+            <td> <%= tim.vozaci[0].ime %> </td>
+            <td> <%= tim.vozaci[0].prezime %> </td>
+            <td align="right"> <%= tim.vozaci[0].broj_bolida %> </td>
+            <td align="right"> <%= tim.vozaci[0].br_utrka %> </td>
+            <td align="right"> <%= tim.vozaci[0].br_pobjeda %> </td>
+            <td align="right"> <%= tim.vozaci[0].osv_WDC %> </td>
+            <td> <%= tim.vozaci[1].ime %> </td>
+            <td> <%= tim.vozaci[1].prezime %> </td>
+            <td align="right"> <%= tim.vozaci[1].broj_bolida %> </td>
+            <td align="right"> <%= tim.vozaci[1].br_utrka %> </td>
+            <td align="right"> <%= tim.vozaci[1].br_pobjeda %> </td>
+            <td align="right"> <%= tim.vozaci[1].osv_WDC %> </td>
+            <td> <%= tim.bolid %> </td>
+            <td> <%= tim.motor %> </td>
+            <td align="right"> <%= tim.osv_WCC %> </td>
+            <td align="right"> <%= tim.godina_pocetka %> </td>
+            <td> <%= tim.zemlja %> </td>
+            <td align="right"> <%= tim.br_utrka %> </td>
+            <td align="right"> <%= tim.br_pobjeda %> </td>
+            <td> <%= tim.poveznica %> </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
