@@ -44,6 +44,46 @@ app.get('/datatable/:id', (req, res, next) => {
     });
 });
 
+app.get('/datatable/:id/jsonn', (req, res, next) => {
+    let obj = JSON.parse(fs.readFileSync(__dirname + "/public/F1timovi.json", 'utf8'));
+    let pas = null;
+    for (let i = 0; i < obj.length; i++) {
+        let property = obj[i];
+        if(property["_id"]["$oid"] == req.params.id) {
+            pas = property;
+        }
+    }
+    let contextType = "context";
+    let contextValue = "@context";
+    let typeType = "@type";
+    let person = "Person";          
+    let sportsTeam = "SportsTeam";
+    let name = "givenName";
+    let surname = "familyName";
+    let affiliation = "affiliation";
+    let aff = "Formula 1";
+    let legalName = "legalName";
+    let coach = "coach";
+    let sport = "sport";
+    let sportName = "Formula 1";
+    let athlete = "athlete";
+    let fullName = "name";
+    pas[contextType] = contextValue;
+    pas[typeType] = sportsTeam;
+    pas[sport] = sportName;
+    pas[legalName] = pas["naziv"];
+    pas[coach] = pas["voditelj"];
+    pas["vozaci"][0][typeType] = person; 
+    pas["vozaci"][1][typeType] = person; 
+    pas["vozaci"][0][name] = pas["vozaci"][0]["ime"]; 
+    pas["vozaci"][1][name] = pas["vozaci"][1]["ime"];  
+    pas["vozaci"][0][surname] = pas["vozaci"][0]["prezime"];  
+    pas["vozaci"][1][surname] = pas["vozaci"][1]["prezime"]; 
+    pas["vozaci"][0][affiliation] = aff;  
+    pas["vozaci"][1][affiliation] = aff; 
+    res.send(pas);
+});
+
 app.get('/datatable/:id/picture', async (req, res, next) => {   
     let obj = JSON.parse(fs.readFileSync(__dirname + "/public/F1timovi.json", 'utf8'));
     let pas = null;

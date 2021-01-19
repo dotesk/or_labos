@@ -5,7 +5,8 @@
     </head>
     <body>
         <a class="gumb-slika" href="/datatable/<%= tim._id.$oid %>/picture"><b>SLIKA</b> </a>
-<br><br>
+        <a class="gumb-slika" href="/datatable/<%= tim._id.$oid %>/jsonn"><b>JSONN</b> </a>
+<br><br>                
 <table id="tab1"> <!-- table table-bordered table-hover table-condensed -->
     <thead id="head">
         <tr>
@@ -62,6 +63,9 @@
         </tr>
     </tbody>
 </table>
-
+<script>
+    var data = '<%-JSON.stringify(tim)%>';
+    console.log(data);
+</script>
 </body>
 </html>
