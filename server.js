@@ -98,7 +98,7 @@ app.get('/datatable/:id/picture', async (req, res, next) => {
     request(link , { json: true },   async (e, r, body) => {
         if (e) { return console.log(e); }
         if(body.originalimage == null) {
-            res.send("wiki api ne radi lmao");
+            res.send("wiki api ne radi");
         } else {
             let image = body.originalimage.source;
             if (fs.existsSync("./public/" + poveznica + ".jpg")) {
